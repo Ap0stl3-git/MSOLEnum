@@ -12,12 +12,19 @@ The *userlist.txt* file should be a list of userID's without the *@company.com* 
 The two files, *AD-1000-Username-list.txt* and *AD-5000-Username-list.txt*, consist of the top 1000 and 5000 US last names each with a-z prepended to them.
 
 For example:
+
 asmith
+
 bsmith
+
 csmith
-.
+
 .
 
+.
+
+
 AD-1000-Username-list.txt = 26,000 usernames
+
 AD-5000-Username-list.txt = 130,000 usernames
 
