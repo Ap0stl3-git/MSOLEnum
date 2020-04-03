@@ -5,7 +5,7 @@ EXAMPLE
         
 C:\PS> Invoke-MSOLEnum -UserList .\userlist.txt -Password TESTPASS -OutFile validusers.txt -Domain company.com
 
-##Userlist
+## Userlist
 
 The *userlist.txt* file should be a list of userID's without the *@company.com* suffix such as those included in the repository.
 
