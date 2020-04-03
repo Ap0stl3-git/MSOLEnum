@@ -1,5 +1,5 @@
 # MSOLEnum
-Modification of Beau Bullock (@dafthack)'s MSOLSpray.ps1 script to be used for User ID enumeration.
+Modification of Beau Bullock (@dafthack)'s MSOLSpray.ps1 script to be used for User ID enumeration.  MSOLSpray.ps1 can be found here... [//dafthack/MSOLSpray](https://github.com/dafthack/MSOLSpray)
 
 EXAMPLE
         
