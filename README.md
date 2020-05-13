@@ -4,6 +4,7 @@ Modification of Beau Bullock (@dafthack)'s MSOLSpray.ps1 script to be used for U
 EXAMPLE
         
 C:\PS> Invoke-MSOLEnum -UserList .\userlist.txt -Password TESTPASS -OutFile validusers.txt -Domain company.com -Sleep 61
+
 or
 C:\PS> Invoke-MSOLEnum -UserList .\userlist.txt -PWList .\pwlist.txt -OutFile validusers.txt -Domain company.com -Sleep 61
 
