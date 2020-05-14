@@ -1,5 +1,5 @@
 # MSOLEnum
-Modification of Beau Bullock (@dafthack)'s MSOLSpray.ps1 script to be used for User ID enumeration against Microsoft Online accounts (Azure/O365).  MSOLSpray.ps1 can be found here... [//dafthack/MSOLSpray](https://github.com/dafthack/MSOLSpray)
+Modification of Beau Bullock (@dafthack)'s MSOLSpray.ps1 script to be used for User ID enumeration and/or password spraying against Microsoft Online accounts (Azure/O365).  MSOLSpray.ps1 can be found here... [//dafthack/MSOLSpray](https://github.com/dafthack/MSOLSpray)
 
 EXAMPLE
         
