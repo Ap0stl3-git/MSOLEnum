@@ -124,10 +124,38 @@ function Invoke-MSOLEnum{
         $fullresults = @()
     
         Write-Host -ForegroundColor "yellow" ("[*] There are " + $count + " total users to spray.")
-        Write-Host -ForegroundColor "yellow" ("[*] With a Sleep value of " + $Sleep + " seconds, it will take aprox "+ $count*$sleep/60 + " minutes per password.")
-        Write-Host -ForegroundColor "yellow" "[*] Now spraying Microsoft Online."
-        $currenttime = Get-Date
-        Write-Host -ForegroundColor "yellow" "[*] Current date and time: $currenttime"
+    
+    
+                # Allow user to verify expected password spray interval based on sleep time and number of user accounts, before proceeding
+                if ($PWList)
+                {
+                    If (!$Sleep -or $Sleep -eq 0)
+                    {
+                        Write-Host -ForegroundColor "red" ("[*] WARNING - With no Sleep value or Sleep = 0, cannot calculate expected per password time interval.")
+                    }
+                    $title = "[*] With a Sleep value of " + $Sleep + " seconds, it will take aprox "+ [math]::Truncate($count*$sleep/60) + " minutes per password."
+                    $message = "Do you want to continue this spray?"
+    
+                    $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", `
+                        "Continues the password spray."
+    
+                    $no = New-Object System.Management.Automation.Host.ChoiceDescription "&No", `
+                        "Cancels the password spray."
+    
+                    $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
+    
+                    $result = $host.ui.PromptForChoice($title, $message, $options, 0)
+                    $continuequestion++
+                    if ($result -ne 0)
+                    {
+                        Write-Host "[*] Cancelling the password spray."
+                        break
+                    }
+                }
+            Write-Host -ForegroundColor "yellow" "[*] Now spraying Microsoft Online."
+            $currenttime = Get-Date
+            Write-Host -ForegroundColor "yellow" "[*] Current date and time: $currenttime"                
+    
     
         # When a single password is supplied in the command line and NOT a file with list of passwords
         If ($Password)
